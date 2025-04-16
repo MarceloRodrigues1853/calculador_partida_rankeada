@@ -51,6 +51,10 @@ function calcularRanked(v, d) {
 
   console.log(`O Herói tem saldo de ${saldo} e está no nível de ${nivel}`);
 }
+
+// Exemplo:
+calcularRanked(15, 3); // O Herói tem saldo de 12 e está no nível de Bronze
+
 ```
 👍 Gostou?
 Se curtiu, deixa uma ⭐ no repositório e compartilha com a galera!
