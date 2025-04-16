@@ -1,27 +1,25 @@
+
 # 🎮 Calculadora de Partidas Rankeadas
-
 Bem-vindo(a)! Aqui você encontra um script simples que classifica seu “herói” conforme as vitórias e derrotas em partidas rankeadas. ⚔️
-
----
 
 ## 🚀 Como usar
 
-1. Clone este repositório  
-   ```bash
-   git clone https://github.com/MarceloRodrigues1853/seu-repo.git
+### Clone este repositório
+
+`git clone https://github.com/MarceloRodrigues1853/seu-repo.git`
+
 Entre na pasta do projeto
+ `cd seu-repo`
+ 
+Abra o arquivo `index.js` e ajuste os valores de vitórias e derrotas
 
-bash
-Copiar
-cd seu-repo
-Abra o arquivo index.js e ajuste os valores de vitórias e derrotas
-
-Rode no terminal (precisa ter o Node.js instalado)
-
-bash
-
+Rode no terminal (precisa ter o `Node.js` instalado)
+```node
 node index.js
-🔍 Regras de Classificação
+```
+
+## 🔍 Regras de Classificação
+
 🛠️ Ferro: menos de 10 vitórias
 
 🥉 Bronze: até 20 vitórias
@@ -36,8 +34,9 @@ node index.js
 
 ☄️ Imortal: 101 vitórias ou mais
 
-📜 Exemplo de Código
-javascript
+## 📜 Exemplo de Código
+
+```javascript
 
 function calcularRanked(v, d) {
   const saldo = v - d;
@@ -52,5 +51,6 @@ function calcularRanked(v, d) {
 
   console.log(`O Herói tem saldo de ${saldo} e está no nível de ${nivel}`);
 }
+```
 👍 Gostou?
 Se curtiu, deixa uma ⭐ no repositório e compartilha com a galera!
