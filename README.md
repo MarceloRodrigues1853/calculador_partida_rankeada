@@ -38,22 +38,43 @@ node index.js
 
 ```javascript
 
-function calcularRanked(v, d) {
-  const saldo = v - d;
+// Contadores iniciais
+let vitorias = 0;
+let derrotas = 0;
+
+// Registra uma vitória
+function ganhaPartida() {
+  vitorias++;
+}
+
+// Registra uma derrota
+function perdePartida() {
+  derrotas++;
+}
+
+// Calcula e mostra o nível
+function calcularNivel() {
+  const saldo = vitorias - derrotas;
   let nivel;
-  if (v < 10) nivel = "Ferro";
-  else if (v <= 20) nivel = "Bronze";
-  else if (v <= 50) nivel = "Prata";
-  else if (v <= 80) nivel = "Ouro";
-  else if (v <= 90) nivel = "Diamante";
-  else if (v <= 100) nivel = "Lendário";
+  if (vitorias < 10) nivel = "Ferro";
+  else if (vitorias <= 20) nivel = "Bronze";
+  else if (vitorias <= 50) nivel = "Prata";
+  else if (vitorias <= 80) nivel = "Ouro";
+  else if (vitorias <= 90) nivel = "Diamante";
+  else if (vitorias <= 100) nivel = "Lendário";
   else nivel = "Imortal";
 
   console.log(`O Herói tem saldo de ${saldo} e está no nível de ${nivel}`);
 }
 
-// Exemplo:
-calcularRanked(15, 3); // O Herói tem saldo de 12 e está no nível de Bronze
+// === CHAMADAS DE EXEMPLO ===
+// simula 12 vitórias e 3 derrotas
+for (let i = 0; i < 12; i++) ganhaPartida();
+for (let i = 0; i < 3; i++) perdePartida();
+
+// mostra no console
+calcularNivel();
+
 
 ```
 👍 Gostou?
